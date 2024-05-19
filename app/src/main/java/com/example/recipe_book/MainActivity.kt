@@ -15,6 +15,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.recipe_book.bottom_bar.presentation.BottomBarNavigationScreen
 import com.example.recipe_book.recipe.presentation.recipes_list_screen.RecipeListScreen
 import com.example.recipe_book.ui.theme.RecipeBookTheme
 import com.example.recipe_book.util.Event
@@ -46,7 +47,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    RecipeListScreen()
+                    BottomBarNavigationScreen()
                 }
             }
         }
