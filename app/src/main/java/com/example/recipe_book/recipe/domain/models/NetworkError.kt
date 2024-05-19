@@ -5,8 +5,8 @@ data class NetworkError(
     val t: Throwable? = null
 )
 
-enum class ApiError(val message: String){
-    NetworkError ("Network Error"),
-    UnknownResponse ("Unknown Response"),
+enum class ApiError(val message: String) {
+    NetworkError("Network Error"),
+    UnknownResponse("Unknown Response"),
     UnknownError("Unknown Error")
 }

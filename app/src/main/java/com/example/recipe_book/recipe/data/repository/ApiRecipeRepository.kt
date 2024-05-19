@@ -6,12 +6,13 @@ import com.example.recipe_book.recipe.data.remote.ApiRecipe
 import com.example.recipe_book.recipe.domain.models.NetworkError
 import com.example.recipe_book.recipe.domain.models.Recipe
 import com.example.recipe_book.recipe.domain.repository.RecipeRepository
+import javax.inject.Inject
 
-class ApiRecipeRepository constructor(private val apiRecipe: ApiRecipe): RecipeRepository {
+class ApiRecipeRepository @Inject constructor(private val apiRecipe: ApiRecipe) : RecipeRepository {
     override suspend fun getRecipesList(): Either<NetworkError, List<Recipe>> {
-       return Either.catch {
-           apiRecipe.getRecipesList();
-       }.mapLeft { it.toNetworkError() }
+        return Either.catch {
+            apiRecipe.getRecipesList()
+        }.mapLeft { it.toNetworkError() }
     }
 
     override suspend fun getRecipe(recipeId: String): Either<NetworkError, Recipe> {
