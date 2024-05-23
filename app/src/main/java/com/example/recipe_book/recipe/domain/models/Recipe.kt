@@ -5,7 +5,7 @@ data class Recipe(
     var id: String? = null,
     val title: String? = null,
     val photos: List<String>? = null,
-    val userId: String? = null,
+    var userId: String? = null,
     val ingredients: List<Ingredient>? = null,
     val steps: List<String>? = null,
     val likes: Int? = null,

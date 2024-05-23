@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "130349121362",
+    "firebase_url": "https://taste-it-3d773-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "taste-it-3d773",
+    "storage_bucket": "taste-it-3d773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130349121362:android:ed8e738695639a1111048b",
+        "android_client_info": {
+          "package_name": "com.example.recipe_book"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_Ej9q_21BxFRR6nFIVL3CkXFZuWkdSk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130349121362:android:2aa19b85e893dba011048b",
+        "android_client_info": {
+          "package_name": "com.sfedu.tasteit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_Ej9q_21BxFRR6nFIVL3CkXFZuWkdSk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
