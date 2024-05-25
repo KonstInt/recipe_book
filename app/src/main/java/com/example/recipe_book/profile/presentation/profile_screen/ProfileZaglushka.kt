@@ -1,4 +1,4 @@
-package com.example.recipe_book.profile
+package com.example.recipe_book.profile.presentation.profile_screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

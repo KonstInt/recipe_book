@@ -1,6 +1,6 @@
-package com.example.recipe_book.recipe.domain.models
+package com.example.recipe_book.profile.domain.models
 
-data class NetworkError(
+data class ProfileNetworkError(
     val error: ApiError,
     val t: Throwable? = null
 )
