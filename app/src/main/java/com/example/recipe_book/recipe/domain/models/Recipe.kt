@@ -2,24 +2,24 @@ package com.example.recipe_book.recipe.domain.models
 
 
 data class Recipe(
-    val id: String,
-    val title: String,
-    val photos: List<String>,
-    val userId: String,
-    val ingredients: List<Ingredient>,
-    val steps: List<String>,
-    val likes: Int,
-    val comments: List<Comments>
+    var id: String? = null,
+    val title: String? = null,
+    val photos: List<String>? = null,
+    var userId: String? = null,
+    val ingredients: List<Ingredient>? = null,
+    val steps: List<String>? = null,
+    val likes: Int? = null,
+    val comments: List<Comments>? = null
 )
 
 data class Ingredient(
-    val name: String,
-    val portion: Double,
-    val portionName: String,
+    val name: String? = null,
+    val portion: Double? = null,
+    val portionName: String? = null,
 )
 
 data class Comments(
-    val text: String,
-    val userId: String,
-    val dateTime: String,
+    val text: String? = null,
+    val userId: String? = null,
+    val dateTime: String? = null,
 )
