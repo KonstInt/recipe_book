@@ -100,8 +100,8 @@ fun BottomBarNavigationScreen() {
             startDestination = Screens.Home.screen,
             modifier = Modifier.padding(paddingValues)
         ) {
-            composable(Screens.Home.screen){ RecipeListScreen() }
-            composable(Screens.Profile.screen){ ProfileZaglushka() }
+            composable(Screens.Home.screen) { RecipeListScreen() }
+            composable(Screens.Profile.screen) { ProfileZaglushka() }
         }
     }
 }

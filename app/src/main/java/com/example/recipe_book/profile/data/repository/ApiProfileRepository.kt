@@ -1,7 +1,5 @@
 package com.example.recipe_book.profile.data.repository
 
-import android.os.Parcel
-import android.os.Parcelable
 import arrow.core.Either
 import com.example.recipe_book.profile.data.mapper.toNetworkError
 import com.example.recipe_book.profile.data.remote.ApiProfile
@@ -9,10 +7,10 @@ import com.example.recipe_book.profile.domain.models.Profile
 import com.example.recipe_book.profile.domain.models.ProfileLite
 import com.example.recipe_book.profile.domain.models.ProfileNetworkError
 import com.example.recipe_book.profile.domain.repository.ProfileRepository
-
 import javax.inject.Inject
 
-class ApiProfileRepository @Inject constructor(private val apiProfile: ApiProfile) : ProfileRepository {
+class ApiProfileRepository @Inject constructor(private val apiProfile: ApiProfile) :
+    ProfileRepository {
 
 
     override suspend fun getProfile(id: String): Either<ProfileNetworkError, Profile> {

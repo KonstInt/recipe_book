@@ -2,7 +2,6 @@ package com.example.recipe_book.profile.data.mapper
 
 import com.example.recipe_book.profile.domain.models.ApiError
 import com.example.recipe_book.profile.domain.models.ProfileNetworkError
-import com.example.recipe_book.recipe.domain.models.RecipeNetworkError
 import retrofit2.HttpException
 import java.io.IOException
 

@@ -1,7 +1,5 @@
 package com.example.recipe_book.profile.domain.models
 
-import javax.annotation.meta.TypeQualifierNickname
-
 data class Profile(
     val id: String,
     val image: String?,

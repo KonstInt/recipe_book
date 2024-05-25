@@ -16,7 +16,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.recipe_book.bottom_bar.presentation.BottomBarNavigationScreen
-import com.example.recipe_book.recipe.presentation.recipes_list_screen.RecipeListScreen
 import com.example.recipe_book.ui.theme.RecipeBookTheme
 import com.example.recipe_book.util.Event
 import com.example.recipe_book.util.EventBus
