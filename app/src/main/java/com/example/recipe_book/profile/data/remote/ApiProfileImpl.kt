@@ -11,4 +11,12 @@ class ApiProfileImpl : ApiProfile {
     override suspend fun getProfile(id: String): Profile {
         TODO("Not yet implemented")
     }
+
+    override suspend fun getSignIn(id: String): Profile {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun getSignUp(login: String, password: String): Profile {
+        TODO("Not yet implemented")
+    }
 }

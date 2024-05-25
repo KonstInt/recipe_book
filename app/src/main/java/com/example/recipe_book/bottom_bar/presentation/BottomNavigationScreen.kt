@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.recipe_book.profile.presentation.profile_screen.ProfileZaglushka
+import com.example.recipe_book.profile.presentation.profile.profile_screen.ProfileZaglushka
 import com.example.recipe_book.recipe.presentation.recipes_list_screen.RecipeListScreen
 
 @Composable

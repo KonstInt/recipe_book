@@ -24,4 +24,15 @@ class ApiProfileRepository @Inject constructor(private val apiProfile: ApiProfil
             apiProfile.getProfileLite(id)
         }.mapLeft { it.toNetworkError() }
     }
+
+    override suspend fun signUp(id: String): Either<ProfileNetworkError, Profile> {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun signIn(
+        login: String,
+        password: String
+    ): Either<ProfileNetworkError, Profile> {
+        TODO("Not yet implemented")
+    }
 }
