@@ -7,5 +7,5 @@ interface ApiRecipe {
 
     suspend fun getRecipesList(): List<RecipeLite>
     suspend fun getRecipe(id: String): Recipe
-
+    suspend fun addRecipe(recipe: Recipe)
 }
