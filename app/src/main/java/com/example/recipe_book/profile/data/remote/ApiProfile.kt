@@ -7,4 +7,7 @@ import com.example.recipe_book.profile.domain.models.ProfileLite
 interface ApiProfile {
     suspend fun getProfileLite(id: String): ProfileLite
     suspend fun getProfile(id: String): Profile
+
+    suspend fun getSignIn(id: String): Profile
+    suspend fun getSignUp(login: String, password: String): Profile
 }
