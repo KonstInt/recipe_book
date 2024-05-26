@@ -11,4 +11,6 @@ interface ProfileRepository {
 
     suspend fun getProfileLiteInfo(id: String):
             Either<ProfileNetworkError, ProfileLite>
+
+
 }
