@@ -12,5 +12,9 @@ interface ProfileRepository {
     suspend fun getProfileLiteInfo(id: String):
             Either<ProfileNetworkError, ProfileLite>
 
+    suspend fun signUp(profile: Profile, password: String):
+            Either<ProfileNetworkError, Profile>
 
+    suspend fun signIn(email: String, password: String):
+            Either<ProfileNetworkError, Profile>
 }

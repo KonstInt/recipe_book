@@ -12,6 +12,7 @@ import javax.inject.Inject
 class ApiProfileRepository @Inject constructor(private val apiProfile: ApiProfile) :
     ProfileRepository {
 
+
     override suspend fun getProfile(id: String): Either<ProfileNetworkError, Profile> {
         return Either.catch {
             apiProfile.getProfile(id)
@@ -24,5 +25,14 @@ class ApiProfileRepository @Inject constructor(private val apiProfile: ApiProfil
         }.mapLeft { it.toNetworkError() }
     }
 
+    override suspend fun signUp(profile:Profile, password: String): Either<ProfileNetworkError, Profile> {
+        TODO("Not yet implemented")
+    }
 
+    override suspend fun signIn(
+        email: String,
+        password: String
+    ): Either<ProfileNetworkError, Profile> {
+        TODO("Not yet implemented")
+    }
 }

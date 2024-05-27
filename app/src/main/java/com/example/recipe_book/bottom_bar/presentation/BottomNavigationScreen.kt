@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.recipe_book.profile.presentation.profile_screen.ProfileZaglushka
+import com.example.recipe_book.profile.presentation.profile.profile_screen.ProfileScreen
 import com.example.recipe_book.recipe.presentation.recipes_list_screen.RecipeListScreen
 
 @Composable
@@ -101,7 +101,7 @@ fun BottomBarNavigationScreen() {
             modifier = Modifier.padding(paddingValues)
         ) {
             composable(Screens.Home.screen) { RecipeListScreen() }
-            composable(Screens.Profile.screen) { ProfileZaglushka() }
+            composable(Screens.Profile.screen) { ProfileScreen() }
         }
     }
 }

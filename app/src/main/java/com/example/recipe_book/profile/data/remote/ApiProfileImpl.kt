@@ -4,11 +4,8 @@ import android.content.ContentValues
 import android.util.Log
 import com.example.recipe_book.profile.domain.models.Profile
 import com.example.recipe_book.profile.domain.models.ProfileLite
-import com.example.recipe_book.recipe.data.remote.ApiRecipeImpl
-import com.example.recipe_book.recipe.domain.models.Recipe
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
@@ -39,7 +36,7 @@ class ApiProfileImpl : ApiProfile {
                 if (document != null) {
                     profile = document.toObject<Profile>()!!
                 } else {
-                    Log.d(ContentValues.TAG, "No such document")
+                    Log.d(ContentValues.TAG, "No such user")
                 }
             }
             .addOnFailureListener { exception ->
@@ -48,19 +45,19 @@ class ApiProfileImpl : ApiProfile {
         return profile
     }
 
-    override suspend fun signUpWithEmailPassword(email: String, password: String): FirebaseUser? {
-        Firebase.auth.createUserWithEmailAndPassword(email,password).await()
-        return Firebase.auth.currentUser
-    }
-
-    override suspend fun signInWithEmailPassword(email: String, password: String): FirebaseUser? {
+    override suspend fun getSignIn(email: String, password: String): Profile? {
         Firebase.auth.signInWithEmailAndPassword(email , password).await()
-        return Firebase.auth.currentUser
+        return Firebase.auth.currentUser?.let { getProfile(it.uid) }
     }
 
-    override fun signOut(): FirebaseUser? {
-        Firebase.auth.signOut()
-        return Firebase.auth.currentUser
+    override suspend fun getSignUp(profile: Profile, password: String): Profile {
+        Firebase.auth.createUserWithEmailAndPassword(profile.email!!, password).await()
+        val id = Firebase.auth.currentUser?.uid
+
+        if (id != null) {
+            _db.collection(FIRESTORE_PROFILE).document(id).set(profile)
+        }
+        return profile
     }
 
 
